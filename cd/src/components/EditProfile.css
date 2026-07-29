@@ -1,0 +1,75 @@
+.edit-profile-container {
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding-bottom: 90px;
+}
+
+.edit-content { width: 90%; max-width: 500px; margin: 0 auto; }
+
+.edit-avatar-section {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.avatar-wrapper-large {
+  width: 110px;
+  height: 110px;
+  border-radius: 40px; /* Luxury Squircle */
+  position: relative;
+  border: 4px solid #f0f8ef;
+}
+
+.avatar-wrapper-large img { width: 100%; height: 100%; object-fit: cover; border-radius: 36px; }
+
+.cam-badge-small {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  background: #3a6633;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #ffffff;
+}
+
+.edit-form { display: flex; flex-direction: column; gap: 25px; margin-top: 10px; }
+
+.label-black-bold {
+  display: block;
+  font-weight: 800;
+  color: #020202;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.standard-input {
+  width: 100%;
+  padding: 16px;
+  background: #ffffff;
+  border: 1.5px solid #eee;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #020202; /* TYPED TEXT IS BLACK */
+  outline: none;
+}
+
+.standard-input:focus { border-color: #3a6633; }
+
+.change-pass-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0;
+  border-top: 1.5px solid #f8f8f8;
+  margin-top: 15px;
+  font-weight: 800;
+  color: #020202;
+  cursor: pointer;
+}
+
+.save-text-btn { background: none; border: none; color: #3a6633; font-weight: 800; font-size: 1rem; cursor: pointer; }

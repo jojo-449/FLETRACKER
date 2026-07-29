@@ -1,0 +1,93 @@
+.splash-container {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, #3a6633 0%, #142612 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+/* THE CENTRAL HUB */
+.animation-hub {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo-stack {
+  position: relative;
+  z-index: 50; /* Ensuring logo is ON TOP */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.white-logo-box {
+  background: #ffffff;
+  width: 85px;
+  height: 85px;
+  border-radius: 26px; /* Smooth squircle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.decorative-ring {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  z-index: 40;
+}
+
+/* BUBBLES & SONAR (Positioned behind everything) */
+.sonar-ring {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 1px solid rgba(168, 224, 164, 0.4);
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.tiny-bubble {
+  position: absolute;
+  width: 5px; /* Tiny but visible */
+  height: 5px;
+  background: #a8e0a4; /* Mint green */
+  border-radius: 50%;
+  z-index: 20;
+}
+
+/* TEXT STYLING */
+.brand-footer {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.splash-brand-text {
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 5px;
+  text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.mint-text {
+  color: #a8e0a4; /* Mint Green Shade */
+}
+
+.accent-bar {
+  width: 45px;
+  height: 4px;
+  background: #a8e0a4;
+  margin: 12px auto 0;
+  border-radius: 10px;
+}

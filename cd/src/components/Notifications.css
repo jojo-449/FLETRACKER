@@ -1,0 +1,31 @@
+/* --- NOTIFICATIONS SPECIFIC --- */:root {
+  --brand-green: #3a6633;
+  --bg-white: #ffffff;
+  --text-black: #020202;
+  --border: #f0f0f0;
+}
+
+/* Common Layouts */
+ .notif-container {
+  min-height: 100vh; background: var(--bg-white); display: flex; flex-direction: column;
+}
+
+.page-nav {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.5rem 6%; border-bottom: 1px solid var(--border);
+}
+
+.back-group { display: flex; align-items: center; gap: 12px; cursor: pointer; }
+.nav-title { font-size: 1.2rem; font-weight: 800; color: var(--text-black); }
+
+.notif-content { flex: 1; width: 90%; max-width: 500px; margin: 20px auto; }
+.section-tag { font-size: 0.85rem; font-weight: 800; color: #888; margin: 25px 0 15px; }
+.notif-item { display: flex; align-items: center; gap: 15px; padding: 18px; border-radius: 18px; margin-bottom: 12px; background: white; }
+.notif-icon-box { width: 45px; height: 45px; border-radius: 14px; display: flex; align-items: center; justify-content: center; }
+.notif-info { flex: 1; }
+.black-notif-title { font-weight: 800; color: var(--text-black); font-size: 1rem; }
+.gray-notif-desc { font-size: 0.85rem; color: #666; font-weight: 500; margin-top: 2px; }
+.notif-time { font-size: 0.75rem; color: #999; font-weight: 700; }
+
+.card-shadow { border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.02); }
+.btn-green-outline { background: transparent; border: 1.5px solid var(--brand-green); color: var(--brand-green); padding: 12px 25px; border-radius: 10px; font-weight: 800; margin-top: 20px; cursor: pointer; }

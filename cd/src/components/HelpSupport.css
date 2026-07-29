@@ -1,0 +1,62 @@
+.help-container {
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding-bottom: 90px;
+}
+
+.help-content {
+  width: 90%;
+  max-width: 500px;
+  margin: 30px auto;
+}
+
+.help-hero {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 45px 25px;
+  text-align: center;
+  border: 1.5px solid #f2f2f2;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.02);
+  margin-bottom: 40px;
+}
+
+.chat-icon-box {
+  width: 75px;
+  height: 75px;
+  background: #f0f8ef;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+}
+
+.start-chat-btn {
+  background: #3a6633;
+  color: white;
+  border: none;
+  padding: 18px 45px;
+  border-radius: 16px;
+  font-weight: 800;
+  font-size: 1.05rem;
+  margin-top: 30px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(58, 102, 51, 0.2);
+}
+
+.faq-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px;
+  background: #ffffff;
+  border: 1.5px solid #f8f8f8;
+  border-radius: 18px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.faq-item:hover { border-color: #3a6633; background: #fcfcfc; }
+
+.black-text-bold { font-weight: 700; color: #020202; font-size: 1rem; }

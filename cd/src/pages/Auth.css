@@ -1,0 +1,222 @@
+:root {
+  --brand-green: #3a6633;
+  --text-black: #1a1a1a;
+  --placeholder-gray: #757575;
+  --border-color: #e2e2e2;
+  --white: #ffffff;
+}
+
+.auth-container {
+  min-height: 100vh;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER & BACK BUTTON */
+.auth-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 6%;
+}
+
+.back-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.back-group:hover { opacity: 0.7; }
+
+.logo-text { font-size: 1.3rem; font-weight: 800; color: var(--text-black); }
+
+/* CONTENT ALIGNMENT */
+.auth-content {
+  flex: 1;
+  width: 90%;
+  max-width: 480px;
+  margin: 20px auto 60px;
+  text-align: left; /* Ensuring left alignment for all text */
+}
+
+.signup-width { max-width: 600px; }
+
+.auth-title-green {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--brand-green);
+  margin-bottom: 12px;
+}
+
+.auth-subtitle-black {
+  color: var(--text-black);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+/* INPUT STYLING */
+.auth-form { display: flex; flex-direction: column; gap: 24px; }
+
+.label-black {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-black);
+  margin-bottom: 8px;
+  text-align: left; /* Strict left alignment */
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon-green {
+  position: absolute;
+  left: 16px;
+  color: var(--brand-green);
+}
+
+.eye-btn {
+  position: absolute;
+  right: 16px;
+  background: none;
+  border: none;
+  color: var(--brand-green);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 15px 45px 15px 45px;
+  border-radius: 12px;
+  border: 1.5px solid var(--border-color);
+  background-color: var(--white); /* White background */
+  color: var(--text-black); /* Black typed text */
+  font-size: 1rem;
+  outline: none;
+  text-align: left; /* Left align for mobile standard */
+}
+
+.input-wrapper input::placeholder {
+  color: var(--placeholder-gray);
+  text-align: left;
+}
+
+.input-wrapper input:focus {
+  border-color: var(--brand-green);
+  box-shadow: 0 4px 15px rgba(58, 102, 51, 0.05);
+}
+
+/* CHECKBOX LOGIC */
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.custom-box {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.custom-box.active {
+  background-color: var(--brand-green);
+  border-color: var(--brand-green);
+}
+
+/* BUTTONS & SOCIALS */
+.auth-primary-btn {
+  background-color: var(--brand-green);
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.social-row { display: flex; gap: 15px; margin-top: 5px; }
+
+.social-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1.5px solid var(--border-color);
+  background: white;
+  font-weight: 700;
+  color: var(--text-black);
+  cursor: pointer;
+}
+
+.black-txt { color: #000000; }
+
+.auth-footer-text {
+  text-align: center;
+  margin-top: 40px;
+  color: #080909;
+}
+
+/* RESPONSIVE GRID */
+@media (min-width: 600px) {
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+/* Add this to your existing Auth.css */
+
+.forgot-password-container {
+  margin-top: 10px;
+  text-align: left; /* Ensures it is on the left below the box */
+}
+
+.forgot-password-container .green-link {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* Ensure the back button looks clickable and premium */
+.back-group {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.back-group:hover {
+    opacity: 0.6;
+}
+
+/* Mobile specific font scaling */
+@media (max-width: 480px) {
+    .auth-title-green {
+        font-size: 1.8rem;
+    }
+    .auth-subtitle-black {
+        font-size: 0.95rem;
+    }
+}

@@ -1,0 +1,70 @@
+.devices-container {
+  min-height: 100vh;
+  background-color: #f8f6f6;
+  padding-bottom: 90px;
+}
+
+.devices-content {
+  width: 90%;
+  max-width: 500px;
+  margin: 25px auto;
+}
+
+.device-card {
+  background: rgb(255, 253, 253);
+  border-radius: 25px;
+  padding: 25px;
+  border: 1.5px solid #f2f2f2;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.02);
+}
+
+.device-main {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 25px;
+  border-bottom: 1.5px solid #f8f8f8;
+}
+
+.device-img-small { width: 75px; height: 75px; object-fit: contain; }
+.black-title {color: #17a755; white-space: nowrap;}
+.id-text { color: #060606; font-size: 0.85rem; font-weight: 600; margin: 4px 0; }
+.status-red { color: #ff4d4d; font-weight: 800; font-size: 0.85rem; }
+
+.connect-btn-small {
+  background: #3a6633;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 0.75rem;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.device-stats-grid { margin: 25px 0; display: flex; flex-direction: column; gap: 15px; }
+
+.stat-unit {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #11b073;
+}
+
+.device-settings-btn {
+  width: 100%;
+  padding: 18px;
+  background: #ffffff;
+  border: 1.5px solid #eee;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-weight: 800;
+  color: #2ea359;
+  cursor: pointer;
+}

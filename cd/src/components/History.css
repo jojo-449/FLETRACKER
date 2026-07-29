@@ -1,0 +1,35 @@
+:root {
+  --brand-green: #3a6633;
+  --bg-white: #ffffff;
+  --text-black: #020202;
+  --border: #f0f0f0;
+}
+
+/* Common Layouts */
+.history-container {
+  min-height: 100vh; background: var(--bg-white); display: flex; flex-direction: column;
+}
+
+.page-nav {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.5rem 6%; border-bottom: 1px solid var(--border);
+}
+
+.back-group { display: flex; align-items: center; gap: 12px; cursor: pointer; }
+.nav-title { font-size: 1.2rem; font-weight: 800; color: var(--text-black); }
+
+/* --- HISTORY SPECIFIC --- */
+.history-content { flex: 1; width: 90%; max-width: 500px; margin: 20px auto; }
+.calendar-card { background: white; border-radius: 24px; padding: 25px; margin-bottom: 30px; }
+.calendar-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+.month-label { font-weight: 800; color: var(--text-black); }
+
+.calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; text-align: center; }
+.day-name { font-size: 0.75rem; font-weight: 700; color: #bbb; margin-bottom: 10px; }
+.day-cell { padding: 12px 0; font-weight: 600; font-size: 0.95rem; cursor: pointer; border-radius: 12px; transition: 0.2s; }
+.active-day { background: var(--brand-green); color: white; box-shadow: 0 5px 15px rgba(58, 102, 51, 0.3); }
+
+/* Empty State */
+.no-activity-card { text-align: center; padding: 50px 20px; background: #fcfcfc; border-radius: 20px; border: 1.5px dashed var(--border); }
+.icon-circle-mint { width: 60px; height: 60px; background: #f0f8ef; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+.section-title-green { color: var(--brand-green); font-size: 1.1rem; font-weight: 800; margin-bottom: 20px; }
