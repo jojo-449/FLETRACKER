@@ -11,10 +11,25 @@ import './Dashboard.css';
 // IMAGE PLACEHOLDERS
 import braceImg from '../assets/images/braceletsingle.png'; 
 import profileImg from '../assets/images/natureBg.jpg'; 
+import { api } from '../services/api';
 
 const Dashboard = () => {
   const navigate = useNavigate();
   const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const [user, setUser] = useState({ name: "Jojo", email: "", profile_picture: null });
+
+  useEffect(() => {
+    api.getProfile()
+      .then(profile => {
+        if (profile) {
+          setUser(profile);
+        }
+      })
+      .catch(err => {
+        console.warn("Backend API is offline or parent is logged out. Displaying demo profile.", err);
+      });
+  }, []);
+
 
   // Scroll Lock Logic (Keeps the page from moving when menu is open)
   useEffect(() => {
@@ -63,12 +78,12 @@ const Dashboard = () => {
 
               <div className="sidebar-profile" onClick={() => handleNav('/Profile')}>
                 <div className="profile-avatar">
-                  <img src={profileImg} alt="User" />
+                  <img src={user.profile_picture || profileImg} alt="User" />
                 </div>
                 <div className="profile-info">
                   <p>Welcome back,</p>
-                  <h3>Jojo 👋</h3>
-                  <p className="status-txt">Stay connected, stay secure.</p>
+                  <h3>{user.name} 👋</h3>
+                  <p className="status-txt">{user.email || "Stay connected, stay secure."}</p>
                 </div>
               </div>
 
@@ -84,7 +99,7 @@ const Dashboard = () => {
                 <SidebarItem Icon={FiFileText} label="Terms & Conditions" onClick={() => handleNav('/Terms')} />
               </nav>
 
-              <div className="sidebar-logout" onClick={() => navigate('/Login')}>
+              <div className="sidebar-logout" onClick={() => api.logout()}>
                 <FiLogOut /> <span>Logout</span>
               </div>
             </motion.aside>
@@ -114,8 +129,8 @@ const Dashboard = () => {
                 <FiBell /><span className="red-dot"></span>
             </div>
             {/* Navigates to Profile on Click */}
-            <div className="nav-user-mini" onClick={() => navigate('/Profile')}>
-                <img src={profileImg} alt="user profile" />
+             <div className="nav-user-mini" onClick={() => navigate('/Profile')}>
+                <img src={user.profile_picture || profileImg} alt="user profile" />
             </div>
           </div>
         </header>
@@ -123,8 +138,8 @@ const Dashboard = () => {
         {/* DASHBOARD BODY */}
         <div className="dashboard-content">
           <div className="page-header">
-            <div className="titles">
-                <h1 className="green-title">Good evening, Jojo! 👋</h1>
+             <div className="titles">
+                <h1 className="green-title">Good evening, {user.name}! 👋</h1>
                 <p className="black-subtitle">Here's what's happening with your tracker today.</p>
             </div>
             <div className="time-card">

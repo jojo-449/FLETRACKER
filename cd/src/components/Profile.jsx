@@ -20,9 +20,24 @@ import './Profile.css';
 // PLACEHOLDER IMAGE - Ensure this path matches your assets folder
 import profileImg from '../assets/images/natureBg.jpg'; 
 import EditProfile from './EditProfile';
+import { api } from '../services/api';
+import { useEffect, useState } from 'react';
 
 const Profile = () => {
   const navigate = useNavigate();
+  const [user, setUser] = useState({ name: "Jojo", email: "jojo@example.com", phone_number: "+234 801 234 5678", profile_picture: null });
+
+  useEffect(() => {
+    api.getProfile()
+      .then(profile => {
+        if (profile) {
+          setUser(profile);
+        }
+      })
+      .catch(err => {
+        console.warn("Backend API is offline or parent is logged out. Displaying demo profile.", err);
+      });
+  }, []);
 
   return (
     <div className="profile-container">
@@ -40,15 +55,15 @@ const Profile = () => {
         {/* --- USER HERO SECTION --- */}
         <section className="profile-hero">
           <div className="avatar-container">
-            <img src={profileImg} alt="User Profile" className="profile-avatar-large" />
+            <img src={user.profile_picture || profileImg} alt="User Profile" className="profile-avatar-large" />
             <div className="camera-badge">
               <FiCamera color="white" size={16} />
             </div>
           </div>
-          <h2 className="user-display-name">Jojo</h2>
+          <h2 className="user-display-name">{user.name}</h2>
           <div className="user-contact-info">
-             <p className="contact-text">jojo@example.com</p>
-             <p className="contact-text">+234 801 234 5678</p>
+             <p className="contact-text">{user.email}</p>
+             <p className="contact-text">{user.phone_number || "No phone number added"}</p>
           </div>
         </section>
 

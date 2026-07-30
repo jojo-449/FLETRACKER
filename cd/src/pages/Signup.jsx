@@ -103,6 +103,8 @@ import { FiArrowLeft, FiMapPin, FiUser, FiMail, FiPhone, FiLock, FiEye, FiEyeOff
 import { FcGoogle } from 'react-icons/fc';
 import { FaApple } from 'react-icons/fa';
 import './Auth.css';
+import { api } from '../services/api';
+
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -181,7 +183,7 @@ const Signup = () => {
         <div className="divider"><span>or continue with</span></div>
 
         <div className="social-row">
-          <button className="social-btn"><FcGoogle size={20} /> Google</button>
+          <button type="button" className="social-btn" onClick={() => api.login()}><FcGoogle size={20} /> Google</button>
           <button className="social-btn black-txt"><FaApple size={20} /> Apple</button>
         </div>
 

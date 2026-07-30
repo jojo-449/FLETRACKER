@@ -4,6 +4,8 @@ import { FiArrowLeft, FiMapPin, FiMail, FiLock, FiEye, FiEyeOff, FiCheck } from 
 import { FcGoogle } from 'react-icons/fc';
 import { FaApple } from 'react-icons/fa';
 import './Auth.css';
+import { api } from '../services/api';
+
 
 const Login = () => {
   const navigate = useNavigate();
@@ -77,7 +79,7 @@ const Login = () => {
 
         {/* SOCIAL LOGINS */}
         <div className="social-row">
-          <button className="social-btn"><FcGoogle size={22} /> Google</button>
+          <button type="button" className="social-btn" onClick={() => api.login()}><FcGoogle size={22} /> Google</button>
           <button className="social-btn black-txt"><FaApple size={22} /> Apple</button>
         </div>
 
